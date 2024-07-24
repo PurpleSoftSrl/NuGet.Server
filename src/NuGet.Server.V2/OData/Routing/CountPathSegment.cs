@@ -9,10 +9,7 @@ namespace NuGet.Server.V2.OData.Routing
     public class CountPathSegment
         : ODataPathSegment
     {
-        public override string SegmentKind
-        {
-            get { return "$count"; }
-        }
+        public override string SegmentKind => "$count";
 
         public override IEdmType GetEdmType(IEdmType previousEdmType)
         {

@@ -10,13 +10,7 @@ namespace NuGet.Server.Infrastructure
     {
         private static readonly Lazy<string> _packagePhysicalPath = new Lazy<string>(ResolvePackagePath);
 
-        public static string PackagePhysicalPath
-        {
-            get
-            {
-                return _packagePhysicalPath.Value;
-            }
-        }
+        public static string PackagePhysicalPath => _packagePhysicalPath.Value;
 
         private static string ResolvePackagePath()
         {

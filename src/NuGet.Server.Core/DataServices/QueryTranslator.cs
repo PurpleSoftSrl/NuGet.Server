@@ -48,16 +48,10 @@ namespace NuGet.Server.Core.DataServices
             return _provider.ExecuteEnumerable(Expression).GetEnumerator();
         }
 
-        public Type ElementType
-        {
-            get { return typeof(T); }
-        }
+        public Type ElementType => typeof(T);
 
         public Expression Expression { get; }
 
-        public IQueryProvider Provider
-        {
-            get { return _provider; }
-        }
+        public IQueryProvider Provider => _provider;
     }
 }

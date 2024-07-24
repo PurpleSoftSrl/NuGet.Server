@@ -18,10 +18,7 @@ namespace NuGet.Shared
         private bool _initialized;
         private long _combinedHash;
 
-        internal int CombinedHash
-        {
-            get { return _combinedHash.GetHashCode(); }
-        }
+        internal int CombinedHash => _combinedHash.GetHashCode();
 
         internal void AddInt32(int i)
         {
